@@ -282,6 +282,7 @@ class Reset:
                 Office.reset_offices_by_events(cursor=cursor, event_ids=event_ids)
                 Business.reset_corp_states(cursor=cursor, event_ids=event_ids)
                 Business.reset_corporations(cursor=cursor, event_info=events_info, event_ids=event_ids)
+                
                 ShareObject.delete_shares(cursor, event_ids)
                 cls._delete_messages(cursor=cursor, event_ids=event_ids)
                 cls._delete_filing_user(cursor=cursor, event_ids=event_ids)
